@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<body>
+    <!--Roteiro de prática
+Siga estes passos: Crie um script “.js”. Declare duas variáveis – uma para conter o resultado da soma (somaTotal) e outra para conter a quantidade máxima de interações (qtdeInteracoes) – e atribua a elas os seguintes valores: 0 e 50, respectivamente. Crie um laço “for” que seja decrementado de 1 em 1, começando na quantidade máxima de interações e chegando a 2 (ou a maior do que 1). Dentro do laço, incremente em uma unidade a variável que armazena o resultado da soma. Ao final do script, fora do laço “for”, imprima o resultado da soma.-->
+    <script>
+        let somaTotal = 0;
+        const qtdeInteracoes = 50;
+        for (let i = qtdeInteracoes; i >= 1; i--) {
+            somaTotal += i; // equivalente a utilizar somaTotal = somaTotal + i
+        }
+        console.log('soma total:', somaTotal);
+    </script>
+</body>
+
+</html>

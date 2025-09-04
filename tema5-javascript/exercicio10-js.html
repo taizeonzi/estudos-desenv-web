@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+     <title>Consumo de JSON local</title>
+</head>
+<body>     
+     <button onclick="loadRemoteJson()">Carregar Json Local</button>
+</body>
+<!--Crie, em seu computador, em qualquer pasta, dois arquivos. O primeiro deve apresentar a extensão “.json”, com o conteúdo json (outro arquivo). O segundo arquivo, uma página html, deve ser criado na mesma pasta em que salvou o primeiro, contendo o código abaixo... Em seguida, clique no arquivo html para que ele seja aberto no navegador. Com a página aberta, clique no
+botão “Carregar Json Local”. Por fim, abra o inspecionador de elemento e analise o conteúdo da aba “console”. Após a execução desses passos, nenhum resultado será exibido no navegador. Entretanto, um erro será apresentado no inspecionador de elementos. Esse erro – relacionado a CORS policy – ocorre porque: existe uma política de segurança que impede a leitura de arquivos locais. Quando tentamos ler arquivos .json a partir de nosso próprio computador, em um diretório comum, obtemos um erro de CORS que está associado a políticas de segurança dos navegadores, as quais impedem a leitura de arquivos locais. Para que seja possível ler um arquivo .json a partir de código JavaScript, em uma página HTML, é necessário que ambos estejam hospedados em um servidor web. -->
+     <script type="text/javascript">
+          function loadRemoteJson(){
+              fetch('dados.json', {
+                   method: 'get'
+               })
+               .then(function(response) {
+                    response.json().then(function(data){
+                         console.log("Dados do Json local: " + JSON.stringify(data));
+                    });
+               })
+               .catch(function(err) {
+                    console.error('O seguinte erro ocorreu durante a requisição: ' + err);
+              });
+          }
+     </script>
+</html>
