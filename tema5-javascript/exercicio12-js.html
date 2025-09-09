@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For...in</title>
+</head>
+<body>
+    <h1>Exercício Iteração nas propriedades de um Objeto</h1>
+    <h2>For...in</h2>
+    <p id="d1">
+
+    </p>
+    <script>
+        const person = {fname:"John",
+        Iname:"Doe",
+        age:25}
+        let text = ""
+        for (let x in person) {
+            text += person[x] + " "; //x é o nome do campo
+        }
+        document.getElementById("d1").innerHTML = text;
+    </script>
+</body>
+</html>

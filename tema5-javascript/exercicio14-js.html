@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For...of</title>
+</head>
+<body>
+    <h1>Exercício Iteração em Vetor (Elemento)</h1> <!--sempre com vetores-->
+    <h2>For...of</h2>
+    <p id="d1">
+
+    </p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let text = "";
+        for (let x of cars) {
+            text += x + " "; //x é o ELEMENTO no vetor
+        }
+        document.getElementById("d1").innerHTML = text;
+    </script>
+</body>
+</html>

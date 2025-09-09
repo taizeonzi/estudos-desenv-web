@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For...in</title>
+</head>
+<body>
+    <h1>Exercício Iteração em Vetor (Posicional)</h1>
+    <h2>For...in</h2>
+    <p id="d1">
+
+    </p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let text = "";
+        for (let x in cars) {
+            text += cars[x] + " "; //x é o ÍNDICE/POSIÇÃO no vetor (o in está capturando os ídices dos elementos)
+        }
+        document.getElementById("d1").innerHTML = text;
+    </script>
+</body>
+</html>
